@@ -16,8 +16,16 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins", { defaults = { lazy = true}})
 
+--vim options
+vim.g.setleader = " "
+vim.cmd("set number")
+vim.cmd("set tabstop=2")
+vim.cmd("set softtabstop=2")
+vim.cmd("set shiftwidth=2")
+
 
 -- mappings
+-- ###########
 -- Lazy-vim
 vim.keymap.set("n", "<leader>wq", ":Lazy load all<CR>", {})
 vim.keymap.set("n", "<leader>w", ":hi WinSeparator guifg=#ffffff<CR>", {})
